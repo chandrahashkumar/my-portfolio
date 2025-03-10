@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <script>
-      document.addEventListener('contextmenu', (e)=>{
-       e.preventDefault();
-      })
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+      });
     </script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -33,12 +33,12 @@
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links">
+        <ul class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
+        </ul>
       </div>
     </nav>
     <section id="profile">
@@ -48,13 +48,9 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Chandrahash Kumar</h1>
-        <p class="section__text__p2">As an Artificial Intelligence &
-          Machine Learning student</p>
+        <p class="section__text__p2">As an Artificial Intelligence & Machine Learning student</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
+          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
             Download Resume
           </button>
           <button class="btn btn-color-1" onclick="window.location.href='./#contact'">
@@ -82,47 +78,35 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
               <p>2+ years <br />Python Developer</p>
             </div>
             <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
-              <p>12th, <br />Bachelor of Technology in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning
-                Bachelor's Degree, in Progress</p>
+              <p>
+                12th, <br />Bachelor of Technology in Computer Science and Engineering with a
+                specialization in Artificial Intelligence and Machine Learning Bachelor's Degree, in
+                Progress
+              </p>
             </div>
           </div>
           <div class="text-container">
             <p>
-            As an Artificial Intelligence and Machine Learning student, I am currently in the process of building a strong foundation in AI and ML while enhancing my critical thinking, problem-solving, and communication skills.
+              As an Artificial Intelligence and Machine Learning student, I am currently in the
+              process of building a strong foundation in AI and ML while enhancing my critical
+              thinking, problem-solving, and communication skills.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -133,11 +117,7 @@
             <h2 class="experience-sub-title">Python Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Python</h3>
                   <p>Experienced</p>
@@ -149,11 +129,7 @@
             <h2 class="experience-sub-title">AI & ML (Future Experience)</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Artificial Intelligence Engineer</h3>
                   <p></p>
@@ -163,12 +139,7 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -177,11 +148,7 @@
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Weather App</h2>
             <div class="btn-container">
@@ -191,65 +158,39 @@
               >
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
                 Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
             </div>
             <h2 class="experience-sub-title project-title">Chatbot</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
                 Live Demo
               </button>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
           <p><a href="mailto:examplemail@gmail.com">chandrahashkumar256@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
           <p><a href="https://www.linkedin.com/in/chandrahashkumar/">LinkedIn</a></p>
         </div>
       </div>

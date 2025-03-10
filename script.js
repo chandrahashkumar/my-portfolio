@@ -1,6 +1,8 @@
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const menuLinks = document.querySelector('.menu-links');
+  if (menuLinks) {
+    menuLinks.classList.toggle('active');
+  } else {
+    console.error('Element with class "menu-links" not found.');
+  }
 }

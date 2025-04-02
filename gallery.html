@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Chandrahash Kumar</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* GALLERY SECTION */
+      #gallery {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+      }
+
+      .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .gallery-item {
+        width: 300px;
+        text-align: center;
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-caption {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #555;
+      }
+
+      @media (max-width: 600px) {
+        .gallery-item {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Chandrahash</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <!-- Hide the Gallery button or mark it as active -->
+          <li><a href="gallery.html" class="active hidden">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="gallery">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Gallery</h1>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <img src="./assets/about-pic.png" alt="Sample Photo 1" class="gallery-img" />
+          <p class="gallery-caption">Sample Photo 1</p>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/sample-photo-2.jpg" alt="Sample Photo 2" class="gallery-img" />
+          <p class="gallery-caption">Sample Photo 2</p>
+        </div>
+        <div class="gallery-item">
+          <img src="./assets/sample-photo-3.jpg" alt="Sample Photo 3" class="gallery-img" />
+          <p class="gallery-caption">Sample Photo 3</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&#169; 2025 Chandrahash Kumar. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

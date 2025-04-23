@@ -419,6 +419,89 @@ article .icon {
   height: 2.5rem;
 }
 
+.contact-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #555);
+}
+
+.form-group input.valid {
+  border-color: #28a745;
+  background-color: #f8fff8;
+}
+
+.form-group input.invalid {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.error-message.visible {
+  opacity: 1;
+}
+
+.error-message {
+  color: #ff3333;
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+input.invalid {
+  border-color: #ff3333;
+  background-color: #fff8f8;
+}
+
+input:focus.invalid {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 51, 51, 0.25);
+}
+
+#contact-form .btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
 /* FOOTER SECTION */
 
 footer {

@@ -420,25 +420,24 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: 1000px;
-  width: 90%;
-  margin: 2rem auto;
-  padding: 2.5rem;
+  max-width: min(1000px, 90%);
+  margin: clamp(1rem, 4vw, 2rem) auto;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   box-sizing: border-box;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.2rem, 3vw, 2rem);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem);
   border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: clamp(4px, 1vw, 5px);
+  font-size: clamp(0.875rem, 2vw, 1rem);
   transition: border-color 0.3s ease;
 }
 
@@ -464,10 +463,10 @@ article .icon {
 }
 
 .error-message {
+  font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+  bottom: clamp(-18px, -4vw, -20px);
   color: #dc3545;
-  font-size: 0.75rem;
   position: absolute;
-  bottom: -20px;
   left: 0;
   transition: opacity 0.3s ease;
   opacity: 0;
@@ -475,14 +474,6 @@ article .icon {
 
 .error-message.visible {
   opacity: 1;
-}
-
-.error-message {
-  color: #ff3333;
-  font-size: 0.875rem;
-  position: absolute;
-  bottom: -20px;
-  left: 0;
 }
 
 input.invalid {
@@ -497,8 +488,8 @@ input:focus.invalid {
 
 #contact-form .btn {
   width: 100%;
-  padding: 0.8rem;
-  margin-top: 1rem;
+  padding: clamp(0.6rem, 2vw, 0.8rem);
+  margin-top: clamp(0.8rem, 2vw, 1rem);
 }
 
 .input-large {
@@ -527,12 +518,16 @@ input:focus.invalid {
 @media screen and (max-width: 768px) {
   .contact-form-container {
     width: 95%;
-    padding: 1.5rem;
-    margin: 1rem auto;
+    padding: clamp(1rem, 2vw, 1.5rem);
   }
 
   .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: clamp(0.5rem, 1.5vw, 0.7rem);
   }
 
   .error-message {
@@ -551,16 +546,16 @@ input:focus.invalid {
   .contact-form-container {
     width: 100%;
     padding: 1rem;
-  }
-
-  .input-large,
-  .textarea-large {
-    font-size: 14px;
-    padding: 8px 12px;
+    margin: 0.8rem auto;
   }
 
   .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  #contact-form .btn {
+    padding: 0.7rem;
+    margin-top: 0.8rem;
   }
 }
 

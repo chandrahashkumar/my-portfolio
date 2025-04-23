@@ -441,6 +441,18 @@ article .icon {
   transition: border-color 0.3s ease;
 }
 
+/* Update input sizes for name and email */
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 100%;
+  height: min(10vh, 100px);  /* Increased height */
+  padding: min(3vh, 2rem);   /* Increased padding */
+  font-size: min(2.5vh, 1.2rem);  /* Increased font size */
+  border: 2px solid #ddd;    /* Made border more visible */
+  border-radius: min(2vh, 12px);  /* Increased border radius */
+  transition: all 0.3s ease;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -515,7 +527,16 @@ input:focus.invalid {
   resize: vertical;
 }
 
-/* Add responsive width for smaller screens */
+/* Responsive adjustments for larger inputs */
+@media screen and (max-width: 768px) {
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    height: min(8vh, 80px);
+    padding: min(2vh, 1.5rem);
+    font-size: min(2.2vh, 1.1rem);
+  }
+}
+
 @media screen and (max-width: 992px) {
   .contact-form-container {
     max-width: min(800px, 90%);
@@ -566,6 +587,13 @@ input:focus.invalid {
 }
 
 @media screen and (max-width: 480px) {
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    height: min(7vh, 60px);
+    padding: min(1.5vh, 1rem);
+    font-size: min(2vh, 1rem);
+  }
+
   .contact-form-container {
     width: 92%;
     padding: 1rem;

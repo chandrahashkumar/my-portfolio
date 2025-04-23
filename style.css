@@ -420,24 +420,24 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: min(1200px, 90%);  /* Increased from 1000px */
-  margin: clamp(1.2rem, 4.8vw, 2.4rem) auto;  /* Increased by 20% */
-  padding: clamp(1.8rem, 3.6vw, 3rem);  /* Increased by 20% */
+  max-width: min(1400px, 95%);  /* Increased from 1200px */
+  margin: clamp(1.5rem, 5vw, 3rem) auto;  /* Increased margins */
+  padding: clamp(2rem, 4vw, 3.5rem);  /* Increased padding */
   box-sizing: border-box;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: clamp(1.44rem, 3.6vw, 2.4rem);  /* Increased by 20% */
+  margin-bottom: clamp(2rem, 4vw, 3rem);  /* Increased margin */
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: clamp(0.72rem, 2.4vw, 0.96rem);  /* Increased by 20% */
+  padding: clamp(1rem, 3vw, 1.5rem);  /* Increased padding */
   border: 1px solid #ddd;
-  border-radius: clamp(5px, 1.2vw, 6px);  /* Increased by 20% */
-  font-size: clamp(1.05rem, 2.4vw, 1.2rem);  /* Increased by 20% */
+  border-radius: clamp(8px, 1.5vw, 10px);  /* Increased border radius */
+  font-size: clamp(1.2rem, 2.8vw, 1.4rem);  /* Increased font size */
   transition: border-color 0.3s ease;
 }
 
@@ -495,19 +495,19 @@ input:focus.invalid {
 
 .input-large {
   width: 100%;
-  height: clamp(48px, 7.2vh, 60px);  /* Increased by 20% */
+  height: clamp(60px, 8vh, 80px);  /* Increased height */
   padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
   font-size: clamp(16.8px, 3.6vw, 19.2px);  /* Increased by 20% */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;  /* Increased margin */
 }
 
 .textarea-large {
   width: 100%;
-  min-height: clamp(144px, 24vh, 180px);  /* Increased by 20% */
-  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+  min-height: clamp(200px, 30vh, 250px);  /* Significantly increased height */
+  padding: clamp(1rem, 3vw, 1.5rem);  /* Increased padding */
   font-size: clamp(14px, 3vw, 16px);
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -519,7 +519,7 @@ input:focus.invalid {
 @media screen and (max-width: 768px) {
   .contact-form-container {
     width: 95%;
-    padding: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(1.5rem, 3vw, 2rem);
   }
 
   .form-group {
@@ -528,7 +528,8 @@ input:focus.invalid {
 
   .form-group input,
   .form-group textarea {
-    padding: clamp(0.5rem, 1.5vw, 0.7rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    padding: clamp(0.8rem, 2.5vw, 1.2rem);
   }
 
   .error-message {
@@ -540,6 +541,14 @@ input:focus.invalid {
     width: 100%;
     padding: clamp(8px, 2vw, 12px);
     font-size: clamp(14px, 3vw, 16px);
+  }
+
+  .input-large {
+    height: clamp(50px, 7vh, 70px);
+  }
+
+  .textarea-large {
+    min-height: clamp(180px, 25vh, 220px);
   }
 }
 

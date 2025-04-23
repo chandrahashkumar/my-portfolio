@@ -516,25 +516,38 @@ input:focus.invalid {
 }
 
 /* Add responsive width for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .contact-form-container {
-    width: min(95%, 600px);
+    max-width: min(800px, 90%);
     padding: min(3vh, 2rem);
-  }
-
-  .form-group {
-    margin-bottom: clamp(1rem, 2vw, 1.5rem);
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: min(1.8vh, 0.9rem); /* Decreased for mobile */
+    font-size: min(2.2vh, 1.1rem);
+    padding: min(2.5vh, 1.2rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    max-width: min(600px, 95%);
+    padding: min(2.5vh, 1.8rem);
+  }
+
+  .form-group {
+    margin-bottom: min(3vh, 2rem);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: min(2vh, 1rem);
     padding: min(2vh, 1rem);
   }
 
   .error-message {
-    font-size: 0.7rem;
-    bottom: -18px;
+    font-size: min(1.6vh, 0.8rem);
+    bottom: -20px;
   }
 
   #contact-form .btn {
@@ -555,21 +568,43 @@ input:focus.invalid {
 @media screen and (max-width: 480px) {
   .contact-form-container {
     width: 92%;
-    padding: min(2vh, 1rem);
+    padding: 1rem;
   }
 
   .form-group {
-    margin-bottom: min(2vh, 1rem);
+    margin-bottom: 1.2rem;
   }
 
-  #contact-form .btn {
-    padding: 0.7rem;
-    margin-top: 0.8rem;
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .error-message {
+    font-size: 0.75rem;
+    bottom: -18px;
   }
 
   .input-large {
-    height: min(6vh, 50px);
-    font-size: min(1.6vh, 0.85rem); /* Further decreased for smaller screens */
+    height: 45px;
+  }
+
+  .textarea-large {
+    min-height: 180px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact-form-container {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
   }
 }
 

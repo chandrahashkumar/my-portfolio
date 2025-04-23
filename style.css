@@ -437,7 +437,7 @@ article .icon {
   padding: min(3vh, 1.5rem);
   border: 1px solid #ddd;
   border-radius: min(1.5vh, 10px);
-  font-size: min(2.8vh, 1.4rem);
+  font-size: min(2vh, 1rem); /* Decreased from 2.8vh to 2vh */
   transition: border-color 0.3s ease;
 }
 
@@ -497,7 +497,7 @@ input:focus.invalid {
   width: 100%;
   height: min(8vh, 80px);
   padding: min(2vh, 20px);
-  font-size: min(2.8vh, 1.2rem);
+  font-size: min(2vh, 1rem); /* Decreased from 2.8vh to 2vh */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
@@ -508,7 +508,7 @@ input:focus.invalid {
   width: 100%;
   min-height: min(30vh, 250px);
   padding: min(3vh, 1.5rem);
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: min(2vh, 1rem); /* Decreased from 3vw to match inputs */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
@@ -528,7 +528,7 @@ input:focus.invalid {
 
   .form-group input,
   .form-group textarea {
-    font-size: min(2.5vh, 1.2rem);
+    font-size: min(1.8vh, 0.9rem); /* Decreased for mobile */
     padding: min(2vh, 1rem);
   }
 
@@ -569,7 +569,7 @@ input:focus.invalid {
 
   .input-large {
     height: min(6vh, 50px);
-    font-size: min(2.2vh, 1rem);
+    font-size: min(1.6vh, 0.85rem); /* Further decreased for smaller screens */
   }
 }
 

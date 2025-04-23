@@ -420,24 +420,24 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: min(1000px, 90%);
-  margin: clamp(1rem, 4vw, 2rem) auto;
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: min(1200px, 90%);  /* Increased from 1000px */
+  margin: clamp(1.2rem, 4.8vw, 2.4rem) auto;  /* Increased by 20% */
+  padding: clamp(1.8rem, 3.6vw, 3rem);  /* Increased by 20% */
   box-sizing: border-box;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: clamp(1.2rem, 3vw, 2rem);
+  margin-bottom: clamp(1.44rem, 3.6vw, 2.4rem);  /* Increased by 20% */
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: clamp(0.6rem, 2vw, 0.8rem);
+  padding: clamp(0.72rem, 2.4vw, 0.96rem);  /* Increased by 20% */
   border: 1px solid #ddd;
-  border-radius: clamp(4px, 1vw, 5px);
-  font-size: clamp(0.875rem, 2vw, 1rem);
+  border-radius: clamp(5px, 1.2vw, 6px);  /* Increased by 20% */
+  font-size: clamp(1.05rem, 2.4vw, 1.2rem);  /* Increased by 20% */
   transition: border-color 0.3s ease;
 }
 
@@ -488,15 +488,16 @@ input:focus.invalid {
 
 #contact-form .btn {
   width: 100%;
-  padding: clamp(0.6rem, 2vw, 0.8rem);
-  margin-top: clamp(0.8rem, 2vw, 1rem);
+  padding: clamp(0.72rem, 2.4vw, 0.96rem);  /* Increased by 20% */
+  margin-top: clamp(0.96rem, 2.4vw, 1.2rem);  /* Increased by 20% */
+  font-size: clamp(16.8px, 3.6vw, 19.2px);  /* Increased by 20% */
 }
 
 .input-large {
   width: 100%;
-  height: clamp(40px, 6vh, 50px);
+  height: clamp(48px, 7.2vh, 60px);  /* Increased by 20% */
   padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
-  font-size: clamp(14px, 3vw, 16px);
+  font-size: clamp(16.8px, 3.6vw, 19.2px);  /* Increased by 20% */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
@@ -505,7 +506,7 @@ input:focus.invalid {
 
 .textarea-large {
   width: 100%;
-  min-height: clamp(120px, 20vh, 150px);
+  min-height: clamp(144px, 24vh, 180px);  /* Increased by 20% */
   padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
   font-size: clamp(14px, 3vw, 16px);
   border: 1px solid #ddd;

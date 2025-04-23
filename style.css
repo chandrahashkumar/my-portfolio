@@ -420,14 +420,16 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: 800px;  /* Increased from 600px */
+  max-width: 1000px;
+  width: 90%;
   margin: 2rem auto;
-  padding: 2.5rem;  /* Increased padding */
+  padding: 2.5rem;
+  box-sizing: border-box;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 2rem;  /* Increased spacing between form elements */
+  margin-bottom: 2rem;
 }
 
 .form-group input,
@@ -500,20 +502,66 @@ input:focus.invalid {
 }
 
 .input-large {
-  height: 50px;
-  font-size: 16px;
-  padding: 10px 15px;
   width: 100%;
+  height: clamp(40px, 6vh, 50px);
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 16px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
+  margin-bottom: 1rem;
 }
 
 .textarea-large {
-  min-height: 150px;
-  font-size: 16px;
-  padding: 15px;
   width: 100%;
+  min-height: clamp(120px, 20vh, 150px);
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 16px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+/* Add responsive width for smaller screens */
+@media screen and (max-width: 768px) {
+  .contact-form-container {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 0.7rem;
+    bottom: -18px;
+  }
+
+  #contact-form .btn {
+    width: 100%;
+    padding: clamp(8px, 2vw, 12px);
+    font-size: clamp(14px, 3vw, 16px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .input-large,
+  .textarea-large {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
 }
 
 /* MESSAGES */
@@ -548,7 +596,7 @@ input:focus.invalid {
 footer {
   background-color: #333;
   color: white;
-  padding: 1rem 0; /* Adjust padding for medium size */
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -570,7 +618,7 @@ footer nav {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1rem; /* Adjust font size for medium size */
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {

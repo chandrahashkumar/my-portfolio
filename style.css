@@ -445,11 +445,11 @@ article .icon {
 .form-group input[type="text"],
 .form-group input[type="email"] {
   width: 100%;
-  height: min(10vh, 100px);  /* Increased height */
-  padding: min(3vh, 2rem);   /* Increased padding */
-  font-size: min(2.5vh, 1.2rem);  /* Increased font size */
-  border: 2px solid #ddd;    /* Made border more visible */
-  border-radius: min(2vh, 12px);  /* Increased border radius */
+  height: min(12vh, 120px);  /* Increased from 10vh/100px */
+  padding: min(3.5vh, 2.5rem);   /* Increased padding */
+  font-size: min(2.8vh, 1.3rem);  /* Increased font size */
+  border: 2px solid #ddd;
+  border-radius: min(2.5vh, 15px);  /* Increased border radius */
   transition: all 0.3s ease;
 }
 
@@ -531,8 +531,8 @@ input:focus.invalid {
 @media screen and (max-width: 768px) {
   .form-group input[type="text"],
   .form-group input[type="email"] {
-    height: min(8vh, 80px);
-    padding: min(2vh, 1.5rem);
+    height: min(10vh, 100px);
+    padding: min(2.5vh, 1.8rem);
     font-size: min(2.2vh, 1.1rem);
   }
 }
@@ -547,6 +547,12 @@ input:focus.invalid {
   .form-group textarea {
     font-size: min(2.2vh, 1.1rem);
     padding: min(2.5vh, 1.2rem);
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    height: min(11vh, 110px);
+    padding: min(3vh, 2rem);
   }
 }
 
@@ -564,6 +570,12 @@ input:focus.invalid {
   .form-group textarea {
     font-size: min(2vh, 1rem);
     padding: min(2vh, 1rem);
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"] {
+    height: min(10vh, 100px);
+    padding: min(2.5vh, 1.8rem);
   }
 
   .error-message {
@@ -589,8 +601,8 @@ input:focus.invalid {
 @media screen and (max-width: 480px) {
   .form-group input[type="text"],
   .form-group input[type="email"] {
-    height: min(7vh, 60px);
-    padding: min(1.5vh, 1rem);
+    height: min(9vh, 90px);
+    padding: min(2vh, 1.5rem);
     font-size: min(2vh, 1rem);
   }
 

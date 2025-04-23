@@ -48,12 +48,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form submission validation
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        if (!validateEmail(emailInput.value)) {
-            e.preventDefault();
-            emailInput.classList.add('invalid');
-            errorMessage.textContent = 'Please enter a valid email address';
-            errorMessage.classList.add('visible');
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const submitButton = form.querySelector('button[type="submit"]');
+        const successMessage = document.getElementById('success-message');
+        
+        try {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value
+            };
+            
+            const response = await fetch('http://localhost:3000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                successMessage.textContent = 'Message sent successfully!';
+                successMessage.classList.remove('hidden');
+                form.reset();
+                
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            } else {
+                throw new Error(data.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
         }
     });
 });

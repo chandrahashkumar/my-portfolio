@@ -420,24 +420,24 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: min(1400px, 95%);  /* Increased from 1200px */
-  margin: clamp(1.5rem, 5vw, 3rem) auto;  /* Increased margins */
-  padding: clamp(2rem, 4vw, 3.5rem);  /* Increased padding */
+  max-width: min(1400px, 95%);
+  margin: min(5vh, 3rem) auto;
+  padding: min(4vh, 3.5rem);
   box-sizing: border-box;
 }
 
 .form-group {
   position: relative;
-  margin-bottom: clamp(2rem, 4vw, 3rem);  /* Increased margin */
+  margin-bottom: min(4vh, 3rem);
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: clamp(1rem, 3vw, 1.5rem);  /* Increased padding */
+  padding: min(3vh, 1.5rem);
   border: 1px solid #ddd;
-  border-radius: clamp(8px, 1.5vw, 10px);  /* Increased border radius */
-  font-size: clamp(1.2rem, 2.8vw, 1.4rem);  /* Increased font size */
+  border-radius: min(1.5vh, 10px);
+  font-size: min(2.8vh, 1.4rem);
   transition: border-color 0.3s ease;
 }
 
@@ -495,19 +495,19 @@ input:focus.invalid {
 
 .input-large {
   width: 100%;
-  height: clamp(60px, 8vh, 80px);  /* Increased height */
-  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
-  font-size: clamp(16.8px, 3.6vw, 19.2px);  /* Increased by 20% */
+  height: min(8vh, 80px);
+  padding: min(2vh, 20px);
+  font-size: min(2.8vh, 1.2rem);
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
-  margin-bottom: 1.5rem;  /* Increased margin */
+  margin-bottom: min(3vh, 1.5rem);
 }
 
 .textarea-large {
   width: 100%;
-  min-height: clamp(200px, 30vh, 250px);  /* Significantly increased height */
-  padding: clamp(1rem, 3vw, 1.5rem);  /* Increased padding */
+  min-height: min(30vh, 250px);
+  padding: min(3vh, 1.5rem);
   font-size: clamp(14px, 3vw, 16px);
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -518,8 +518,8 @@ input:focus.invalid {
 /* Add responsive width for smaller screens */
 @media screen and (max-width: 768px) {
   .contact-form-container {
-    width: 95%;
-    padding: clamp(1.5rem, 3vw, 2rem);
+    width: min(95%, 600px);
+    padding: min(3vh, 2rem);
   }
 
   .form-group {
@@ -528,8 +528,8 @@ input:focus.invalid {
 
   .form-group input,
   .form-group textarea {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-    padding: clamp(0.8rem, 2.5vw, 1.2rem);
+    font-size: min(2.5vh, 1.2rem);
+    padding: min(2vh, 1rem);
   }
 
   .error-message {
@@ -544,28 +544,32 @@ input:focus.invalid {
   }
 
   .input-large {
-    height: clamp(50px, 7vh, 70px);
+    height: min(7vh, 60px);
   }
 
   .textarea-large {
-    min-height: clamp(180px, 25vh, 220px);
+    min-height: min(25vh, 200px);
   }
 }
 
 @media screen and (max-width: 480px) {
   .contact-form-container {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.8rem auto;
+    width: 92%;
+    padding: min(2vh, 1rem);
   }
 
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: min(2vh, 1rem);
   }
 
   #contact-form .btn {
     padding: 0.7rem;
     margin-top: 0.8rem;
+  }
+
+  .input-large {
+    height: min(6vh, 50px);
+    font-size: min(2.2vh, 1rem);
   }
 }
 

@@ -420,17 +420,14 @@ article .icon {
 }
 
 .contact-form-container {
-  max-width: 600px;
+  max-width: 800px;  /* Increased from 600px */
   margin: 2rem auto;
-  padding: 2rem;
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;  /* Increased padding */
 }
 
 .form-group {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;  /* Increased spacing between form elements */
 }
 
 .form-group input,
@@ -500,6 +497,23 @@ input:focus.invalid {
   width: 100%;
   padding: 0.8rem;
   margin-top: 1rem;
+}
+
+.input-large {
+  height: 50px;
+  font-size: 16px;
+  padding: 10px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea-large {
+  min-height: 150px;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 /* FOOTER SECTION */
